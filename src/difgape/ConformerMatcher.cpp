@@ -6,6 +6,7 @@
  */
 
 #include "ConformerMatcher.h"
+#include "../util/Reporter.h"
 
 namespace Difgape {
 

@@ -1,16 +1,19 @@
-/*
- * GaBase.h
- *
- *  Created on: Mar 28, 2013
- *      Author: Gareth Jones
- */
-
+//
+//  Copyright (C) 2020 Gareth Jones, Glysade LLC
+//
+//   @@ All Rights Reserved @@
+//  This file is part of the RDKit.
+//  The contents are covered by the terms of the BSD license
+//  which is included in the file license.txt, found at the root
+//  of the RDKit source tree.
+//
 
 #ifndef GABASE_H_
 #define GABASE_H_
 
 #include <memory>
 #include "../util/RandomUtil.h"
+#include "../util/export.h"
 
 namespace GapeGa {
 
@@ -21,46 +24,33 @@ using namespace GarethUtil;
  * case an exception should be thrown.
  *
  */
-class GaBase {
-private:
-	std::string fileName;
-	GarethUtil::RandomUtil &rng = RandomUtil::getInstance();
-	size_t popsize = 100;
-	double selectionPressure = 1.1;
-	GaBase(const GaBase & other) = delete;
-	GaBase & operator =(const GaBase & other) = delete;
-public:
-	GaBase() {
-	}
-	;
-	virtual ~GaBase() {
-	}
-	;
+class GA_EXPORT GaBase {
+ private:
+  std::string fileName;
+  GarethUtil::RandomUtil& rng = RandomUtil::getInstance();
+  size_t popsize = 100;
+  double selectionPressure = 1.1;
+  GaBase(const GaBase& other) = delete;
+  GaBase& operator=(const GaBase& other) = delete;
 
-	double getSelectionPressure() const {
-		return selectionPressure;
-	}
+ public:
+  GaBase(){};
+  virtual ~GaBase(){};
 
-	size_t getPopsize() const {
-		return popsize;
-	}
+  double getSelectionPressure() const { return selectionPressure; }
 
-	GarethUtil::RandomUtil& getRng() {
-		return rng;
-	}
+  size_t getPopsize() const { return popsize; }
 
-protected:
+  GarethUtil::RandomUtil& getRng() { return rng; }
 
-	void setSelectionPressure(double selectionPressure) {
-		this->selectionPressure = selectionPressure;
-	}
+ protected:
+  void setSelectionPressure(double selectionPressure) {
+    this->selectionPressure = selectionPressure;
+  }
 
-	void setPopsize(size_t popsize) {
-		this->popsize = popsize;
-	}
-
+  void setPopsize(size_t popsize) { this->popsize = popsize; }
 };
 
-}
+}  // namespace GapeGa
 
 #endif /* GABASE_H_ */

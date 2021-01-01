@@ -1,15 +1,18 @@
-/*
- * Chromosome.h
- *
- *  Created on: Mar 28, 2013
- *      Author: Gareth Jones
- */
-
+//
+//  Copyright (C) 2020 Gareth Jones, Glysade LLC
+//
+//   @@ All Rights Reserved @@
+//  This file is part of the RDKit.
+//  The contents are covered by the terms of the BSD license
+//  which is included in the file license.txt, found at the root
+//  of the RDKit source tree.
+//
 
 #ifndef CHROMOSOME_H_
 #define CHROMOSOME_H_
 
-#include "string"
+#include <string>
+#include "../util/export.h"
 
 namespace GapeGa {
 
@@ -17,7 +20,7 @@ namespace GapeGa {
  * Base class for all GA chromosomes
  *
  */
-class Chromosome {
+class GA_EXPORT Chromosome {
 private:
 	static int idCounter;
 	int chromosomeId;

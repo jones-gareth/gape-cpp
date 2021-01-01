@@ -1,19 +1,23 @@
-/*
- * IntegerStringChromosomePolicy.h
- *
- *  Created on: Apr 12, 2013
- *      Author: gjones
- */
+//
+//  Copyright (C) 2020 Gareth Jones, Glysade LLC
+//
+//   @@ All Rights Reserved @@
+//  This file is part of the RDKit.
+//  The contents are covered by the terms of the BSD license
+//  which is included in the file license.txt, found at the root
+//  of the RDKit source tree.
+//
 
 #ifndef INTEGERSTRINGCHROMOSOMEPOLICY_H_
 #define INTEGERSTRINGCHROMOSOMEPOLICY_H_
 
 #include "../util/RandomUtil.h"
+#include "../util/export.h"
 #include "StringChromosomeBase.h"
 
 namespace GapeGa {
 
-class IntegerStringChromosomePolicy {
+class GA_EXPORT IntegerStringChromosomePolicy {
 public:
 	IntegerStringChromosomePolicy(GarethUtil::RandomUtil & rng_, int s);
 	virtual ~IntegerStringChromosomePolicy();

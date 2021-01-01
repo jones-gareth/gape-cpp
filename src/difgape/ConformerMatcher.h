@@ -62,7 +62,7 @@ public:
 	 */
 	shared_ptr<DifgapeChromosome> createChromosome();
 
-	const vector<shared_ptr<GaOperation<DifgapeChromosome> > >& getOperations() const {
+	const vector<shared_ptr<GaOperation<DifgapeChromosome> > > getOperations() const {
 		return operations;
 	}
 

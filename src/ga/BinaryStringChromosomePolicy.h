@@ -1,20 +1,22 @@
-/** 
- * File:   BinaryStringChromosomePolicy.h
- * Author: Gareth Jones
- *
- * Created on April 11, 2013, 10:24 PM
- */
-
+//
+//  Copyright (C) 2020 Gareth Jones, Glysade LLC
+//
+//   @@ All Rights Reserved @@
+//  This file is part of the RDKit.
+//  The contents are covered by the terms of the BSD license
+//  which is included in the file license.txt, found at the root
+//  of the RDKit source tree.
+//
 
 #ifndef BINARYSTRINGCHROMOSOMEPOLICY_H
 #define	BINARYSTRINGCHROMOSOMEPOLICY_H
 
-#include "StringChromosomeBase.h"
+#include "../util/export.h"
 #include "../util/RandomUtil.h"
 
 namespace GapeGa {
 
-class BinaryStringChromosomePolicy {
+class GA_EXPORT BinaryStringChromosomePolicy {
 public:
     BinaryStringChromosomePolicy(GarethUtil::RandomUtil & rng_);
     virtual ~BinaryStringChromosomePolicy();
@@ -25,7 +27,7 @@ public:
 private:
     GarethUtil::RandomUtil & rng;
     BinaryStringChromosomePolicy(const BinaryStringChromosomePolicy& orig);
-    BinaryStringChromosomePolicy & operator =(const BinaryStringChromosomePolicy & other);
+    BinaryStringChromosomePolicy & operator=(const BinaryStringChromosomePolicy & other);
 };
 
 }
